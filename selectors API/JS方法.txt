@@ -1,0 +1,14 @@
+JS方法：
+getElementById      根据指定的id特性值查找并返回元素        <div id = "foo">
+                                                        getElementById("foo");
+                                                    
+getElementByName    返回所有name特性为指定值的元素      <input type = "text" name = "foo">
+                                                        getElementByName("foo");
+
+getElementByTagName 返回所有标签名称与指定值相匹配的元素    <div id = "foo">
+                                                        getElementById("foo");
+
+
+新QuerySelector方法：
+querySelector()         根据指定的选择规则，返回在页面中找到的第一个匹配元素    querySelector("input.error");   返回第一个css类名的“error”文本输入框
+querySelectorAll()      根据指定规则返回页面中所有匹配的元素                   querySelectorAll("#results td"); 返回id为“results”的元素下所有单元格
