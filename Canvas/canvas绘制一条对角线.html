@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id = "diagonal" style = "border:1px solid;" width = "200" height = "200"></canvas>
+    <script>
+        /*
+        beginPath方法表示开始绘制路径，
+        moveTo(x, y)方法设置线段的起点，
+        lineTo(x, y)方法设置线段的终点，
+        stroke方法用来给透明的线段着色。
+        */
+        function drawDiagonal() {
+            //取得canvas元素及其绘图上下文
+            var canvas = document.getElementById('diagonal');
+            var context = canvas.getContext('2d');
+
+            //用绝对坐标创建一条路径
+            context.beginPath();
+            context.moveTo(70,140);
+            context.lineTo(140,70);
+
+            //将这条线绘制到canvas上
+            context.stroke();
+        }
+        window.addEventListener("load", drawDiagonal, true);
+    </script>
+</body>
+</html>
