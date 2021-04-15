@@ -1,0 +1,4 @@
+shadowColor         任何CSS中的颜色值       可以使用透明度(alpha)
+shadowOffsetX       像素值                  值为正数，向右移动阴影；值为负数，向左移动阴影
+shadowOffsetY       像素值                  值为正数，向下移动阴影；值为负数，向上移动阴影
+shadowBlur          高斯模糊值              值越大，阴影边缘越模糊

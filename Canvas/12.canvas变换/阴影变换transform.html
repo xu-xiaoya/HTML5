@@ -48,11 +48,11 @@
             context.fillStyle = 'rgba(0, 0, 0, 0.2)';
             context.fillRect(-5, -50, 10, 50);
 
-            // Redraw the tree with the shadow effects applied
+            // 使用已有的阴影效果重新绘制树
             createCanopyPath(context);
             context.fill();
 
-            // Restore the canvas state
+            // 恢复之前的canvas状态
             context.restore();
 
             var trunkGradient = context.createLinearGradient(-5, -50, 5, -50);

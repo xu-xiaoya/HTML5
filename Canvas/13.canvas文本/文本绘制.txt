@@ -1,0 +1,8 @@
+fillText(text, x, y, maxwidth)
+strokeText(text, x, y, maxwidth)
+
+context属性
+属性                值                                                      备注
+font            CSS字体字符串                                   例如：italic Arial， scans-serif
+textAlign       start/end/left/right/center                             默认start
+textBaseline    top/hanging/middle/alphabetic/ideograhic/bottom        默认alphabetic
