@@ -1,0 +1,8 @@
+context.fillRect(x,y,width,height);
+绘制“已填色”的矩形。默认的填充颜色是黑色。
+
+context.strokeRect(x,y,width,height); 
+绘制矩形（不填色）。笔触的默认颜色是黑色。
+
+context.clearRect(x,y,width,height);
+清空给定矩形内的指定像素

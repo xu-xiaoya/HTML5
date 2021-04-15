@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id = "diagonal" style = "border:1px solid;" width = "200" height = "200"></canvas>
+    <script>
+        /*
+        beginPath方法表示开始绘制路径，
+        moveTo(x, y)方法设置线段的起点，
+        lineTo(x, y)方法设置线段的终点，
+        stroke方法用来给透明的线段着色。
+        */
+        function drawDiagonal() {
+            //取得canvas元素及其绘图上下文
+            var canvas = document.getElementById('diagonal');
+            var context = canvas.getContext('2d');
+
+            //保存当前绘图状态,变换前保存context状态可以方便以后恢复
+            context.save();
+
+            //向右下方移动绘图上下文
+            context.translate(70,140);
+
+            //以原点为起点，绘制与前面相同的线段
+            context.beginPath()
+            context.moveTo(0,0);
+            context.lineTo(70,-70);
+            context.stroke();
+
+            //恢复原有的绘图状态
+            context.restore();
+        }
+        window.addEventListener("load", drawDiagonal, true);
+    </script>
+</body>
+</html>

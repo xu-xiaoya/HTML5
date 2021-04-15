@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<title>Gradient example</title>
+
+<canvas id="trails" style="border: 1px solid;"  width="400" height="600"> </canvas>
+<script>
+    var gravel = new Image();
+    gravel.src = "gravel.jpg";
+    gravel.onload = function () {
+        drawTrails();
+    }
+
+    function createCanopyPath(context) {
+        context.beginPath();
+        context.moveTo(-25, -50);
+        context.lineTo(-10, -80);
+        context.lineTo(-20, -80);
+        context.lineTo(-5, -110);
+        context.lineTo(-15, -110);
+
+        context.lineTo(0, -140);
+
+        context.lineTo(15, -110);
+        context.lineTo(5, -110);
+        context.lineTo(20, -80);
+        context.lineTo(10, -80);
+        context.lineTo(25, -50);
+        context.closePath();
+    }
+
+    function drawTrails() {
+        var canvas = document.getElementById('trails');
+        var context = canvas.getContext('2d');
+
+        context.save();
+        context.translate(130, 250);
+
+        // 创建用作树干纹理的三阶水平渐变
+        var trunkGradient = context.createLinearGradient(-5, -50, 5, -50);
+
+        // 树干的左侧边缘是一般程度的棕色
+        trunkGradient.addColorStop(0, '#663300');
+
+        // 树干的中间偏左位置的颜色淡一些
+        trunkGradient.addColorStop(0.4, '#996600');
+
+        // 树干右侧边缘的颜色要深一些
+        trunkGradient.addColorStop(1, '#552200');
+
+        // 使用渐变色填充树干
+        context.fillStyle = trunkGradient;
+        context.fillRect(-5, -50, 10, 50);
+
+
+        // 创建垂直渐变，用在树冠在树干上投影
+        var canopyShadow = context.createLinearGradient(0, -50, 0, 0);
+
+        // 投影的起点是透明度为50%的黑色
+        canopyShadow.addColorStop(0, 'rgba(0, 0, 0, 0.5)');
+
+        // 方向垂直向下，渐变色在很短的距离内迅速渐变至完全透明，这段长度之外的树干上没有投影
+        canopyShadow.addColorStop(0.2, 'rgba(0, 0, 0, 0.0)');
+
+        // 在树干上填充投影渐变
+        context.fillStyle = canopyShadow;
+        context.fillRect(-5, -50, 10, 50);
+
+        createCanopyPath(context);
+
+        context.lineWidth = 4;
+        context.lineJoin = 'round';
+        context.strokeStyle = '#663300';
+        context.stroke();
+
+        context.fillStyle = '#339900';
+        context.fill();
+
+        context.restore();
+
+        context.save();
+        context.translate(-10, 350);
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.quadraticCurveTo(170, -50, 260, -190);
+        context.quadraticCurveTo(310, -250, 410,-250);
+        context.strokeStyle = '#663300';
+        context.lineWidth = 20;
+        context.stroke();
+        context.restore();
+    }
+
+</script>
+</html>

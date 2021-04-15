@@ -1,0 +1,20 @@
+①context.lineWidth   
+属性设置或返回当前线条的宽度，以像素计。
+
+tip：宽度沿路径线居中对齐的，若先描边再填充，则填充会覆盖封闭图形内一半的描边宽度。
+
+
+②context.lineJoin="bevel|round|miter"; 属性设置或返回所创建边角的类型，当两条线交汇时。
+bevel	创建斜角。
+round	创建圆角。
+miter	默认。创建尖角。("miter" 值受 miterLimit 属性的影响)
+
+③context.strokeStyle=color|gradient|pattern; 属性设置或返回用于笔触的颜色、渐变或模式。
+color	    指示绘图笔触颜色的 CSS 颜色值。默认值是 #000000。
+gradient	用于填充绘图的渐变对象（线性 或 放射性）。
+pattern	    用于创建 pattern 笔触的 pattern 对象。
+
+④context.lineCap="butt|round|square";   属性设置或返回线条末端线帽的样式。
+butt	默认。向线条的每个末端添加平直的边缘。
+round	向线条的每个末端添加圆形线帽。
+square	向线条的每个末端添加正方形线帽。
