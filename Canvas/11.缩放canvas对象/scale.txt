@@ -1,0 +1,4 @@
+context.scale(scalewidth,scaleheight); 方法缩放当前绘图，更大或更小。
+参数	描述
+scalewidth	缩放当前绘图的宽度 (1=100%, 0.5=50%, 2=200%, 依次类推)
+scaleheight	缩放当前绘图的高度 (1=100%, 0.5=50%, 2=200%, etc.)
