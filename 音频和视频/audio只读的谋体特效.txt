@@ -1,0 +1,3 @@
+duration      |     duration 属性返回当前音频/视频的长度，以秒计。如果未设置音频/视频，则返回 NaN
+paused        |     paused 属性返回音频/视频是否已暂停,如果未开始播放，默认返回true
+ended         |     ended 属性返回音频/视频是否已结束
