@@ -5,12 +5,15 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id = "diagonal" style = "border:1px solid;" width = "200" height = "200"></canvas>
+    <!--说明文字插入cannvas元素内，作为替代显示的内容-->
+    <canvas id = "diagonal" style = "border:1px solid;" width = "200" height = "200">
+    您的浏览器不支持canvas元素，请更新或更换您的浏览器
+    </canvas>
     <script>
         /*
         beginPath方法表示开始绘制路径，
         moveTo(x, y)方法设置线段的起点，
-        lineTo(x, y)方法设置线段的终点，
+        lineTo(x, y)方法在moveTo方法指定的起点和参数设置的终点直接绘制一条直线，绘制后光标在终点位置
         stroke方法用来给透明的线段着色。
         */
         function drawDiagonal() {

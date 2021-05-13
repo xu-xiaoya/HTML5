@@ -1,0 +1,33 @@
+canvas元素本身没有绘制能力，仅仅是图形的容器，用户需要使用脚本完成实际的绘图任务。
+
+getContext(""2d)获取画布上下文context，允许进行绘制的2D环境
+
+moveTo(x, y)    方法设置线段的起点
+lineTo(x, y)    方法再moveTo方法指定的起点和参数设置的终点直接绘制一条直线,绘制后光标在终点位置
+stroke()        方法用来给透明的线段着色。
+
+clearRext       清除矩形区域的绘图
+
+lineWidth        设置或返回当前线条的宽度
+strokeStyle      图形边框的样式
+
+fillStyle        填充图形的样式
+fillRect         绘制被填充的矩形
+strokeRect       绘制矩形，不填色
+
+beginPath        开始/重置一条路径
+closePath        连接起点，闭合路径
+arc              创建弧或曲线，用于绘制圆或部分圆
+arcTo            创建介于两个切线之间的弧/曲线。
+
+
+canvas状态指的是当前画面所有样式、变形和裁切的一个快照，以stack堆的方式保存。
+canvas.save( )      用来暂时保存Canvas的状态到堆中
+canvas.restore( )   将上一个保存的状态从堆中再次取出，恢复该状态的所有设置
+
+translate   移动坐标  
+rotate      旋转坐标
+scale       缩放图形
+transform   变换矩阵
+
+clip        裁切路径，类似蒙版作用

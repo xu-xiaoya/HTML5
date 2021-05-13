@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000" height="500"></canvas>
+<script type="text/javascript">
+var context;
+var width,height;
+var i;
+function draw(id) {
+    var canvas = document.getElementById(id);  
+    if (canvas == null)  
+        return false;  
+    context = canvas.getContext('2d'); 
+    width = canvas.width;
+    height = canvas.height;
+    i = 0, j = 0;
+    setInterval(rotate, 100);         //十分之一秒
+}
+function rotate() {   
+    //canvas动画基本方法：不断擦除、重绘、擦除、重绘…………
+    context.clearRect(0,0,width,height);
+    context.fillStyle = "red";
+    context.fillRect(i, j, 50, 50);
+    if (i < width-100) {
+        i = i+15;
+    } else {
+        j = j+15;
+    }
+    
+}
+var canvas = document.getElementById("myCanvas");  
+draw("myCanvas")
+</script>
+</body>
+</html> 

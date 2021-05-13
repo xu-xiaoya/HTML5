@@ -1,2 +1,5 @@
-canvas.save( )：用来保存Canvas的状态
-canvas.restore( )：用来恢复Canvas旋转、缩放等之后的状态，当和canvas.save( )一起使用时，恢复到canvas.save( )保存时的状态。
+canvas状态指的是当前画面所有样式、变形和裁切的一个快照，以stack堆的方式保存。
+
+canvas.save( )：    暂时保存Canvas的状态到堆中
+canvas.restore( )   用来恢复Canvas旋转、缩放等之后的状态，当和canvas.save( )一起使用时，恢复到canvas.save( )保存时的状态。
+                    将上一个保存的状态从堆中再次取出，恢复该状态的所有设置

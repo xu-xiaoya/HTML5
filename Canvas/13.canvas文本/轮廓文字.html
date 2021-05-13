@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+</script>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="100"></canvas>
+<script type="text/javascript">
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.font = "20px Georgia";
+ctx.strokeText("Hello World!",10,50);
+
+ctx.font = "30px Verdana";
+// 创建渐变
+var gradient = ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// 用渐变填色
+ctx.strokeStyle = gradient;
+ctx.strokeText("HTML5+CSS3",10,90);
+
+</script>
+</body>
+</html> 

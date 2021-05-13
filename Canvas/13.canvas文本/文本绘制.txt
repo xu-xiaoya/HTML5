@@ -1,8 +1,10 @@
-fillText(text, x, y, maxwidth)
-strokeText(text, x, y, maxwidth)
+fillText(text, x, y, maxwidth)      绘制被填充的文字
+strokeText(text, x, y, maxwidth)    绘制轮廓方式文字
 
 context属性
-属性                值                                                      备注
-font            CSS字体字符串                                   例如：italic Arial， scans-serif
-textAlign       start/end/left/right/center                             默认start
+属性                         值                                                      备注
+font                     CSS字体字符串                                   例如：italic Arial， scans-serif
+textAlign对齐方式       start/end/left/right/center                             默认start
 textBaseline    top/hanging/middle/alphabetic/ideograhic/bottom        默认alphabetic
+
+measureText(text)         测量当前所绘制文字中指定文字的宽度

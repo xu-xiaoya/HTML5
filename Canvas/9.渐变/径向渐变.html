@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+<script type="text/javascript">
+var ctx = document.getElementById('myCanvas').getContext('2d');
+var radgrad = ctx.createRadialGradient(55,55,20,100,100,90);
+radgrad.addColorStop(0,'#ffffff');
+radgrad.addColorStop(0.75,'#333333');
+radgrad.addColorStop(1,'#000000');
+ctx.fillStyle = radgrad;
+ctx.fillRect(10,10,200,200); 
+</script>
+</body>
+</html>  
